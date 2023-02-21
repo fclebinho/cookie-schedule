@@ -1,4 +1,4 @@
-import { getCssText } from '@ignite-ui/react'
+import { getCssText } from '@cookies-ui/react'
 import { Head, Html, Main, NextScript } from 'next/document'
 
 export default function Document() {

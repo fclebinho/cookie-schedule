@@ -6,7 +6,7 @@ import {
   MultiStep,
   Text,
   TextInput,
-} from '@ignite-ui/react'
+} from '@cookies-ui/react'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import { ArrowRight } from 'phosphor-react'
@@ -122,7 +122,7 @@ export default function TimeIntervals() {
             da semana.
           </Text>
 
-          <MultiStep size={4} currentStep={3} />
+          <MultiStep size={4} currentStep={3} color="primary" />
         </Header>
 
         <IntervalBox as="form" onSubmit={handleSubmit(handleSetTimeIntervals)}>
@@ -149,14 +149,14 @@ export default function TimeIntervals() {
                   </IntervalDay>
                   <IntervalInputs>
                     <TextInput
-                      size="sm"
+                      sizes="small"
                       type="time"
                       step={60}
                       disabled={intervals[index].enabled === false}
                       {...register(`intervals.${index}.startTime`)}
                     />
                     <TextInput
-                      size="sm"
+                      sizes="small"
                       type="time"
                       step={60}
                       disabled={intervals[index].enabled === false}
@@ -172,7 +172,7 @@ export default function TimeIntervals() {
             <FormError size="sm">{errors.intervals.message}</FormError>
           )}
 
-          <Button type="submit" disabled={isSubmitting}>
+          <Button type="submit" size="large" disabled={isSubmitting}>
             Próximo passo
             <ArrowRight />
           </Button>

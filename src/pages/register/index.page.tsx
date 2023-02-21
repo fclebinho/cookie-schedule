@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Button, Heading, MultiStep, Text, TextInput } from '@ignite-ui/react'
+import { Button, Heading, MultiStep, Text, TextInput } from '@cookies-ui/react'
 import { AxiosError } from 'axios'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
@@ -74,7 +74,7 @@ export default function Register() {
             pode editar essas informações depois.
           </Text>
 
-          <MultiStep size={4} currentStep={1} />
+          <MultiStep color="primary" size={4} currentStep={1} />
         </Header>
 
         <Form as="form" onSubmit={handleSubmit(handleRegister)}>
@@ -100,7 +100,7 @@ export default function Register() {
             )}
           </label>
 
-          <Button type="submit" disabled={isSubmitting}>
+          <Button size="large" type="submit" disabled={isSubmitting}>
             Próximo passo
             <ArrowRight />
           </Button>

@@ -1,4 +1,4 @@
-import { Button, Heading, MultiStep, Text } from '@ignite-ui/react'
+import { Button, Heading, MultiStep, Text } from '@cookies-ui/react'
 import { signIn, useSession } from 'next-auth/react'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
@@ -34,23 +34,19 @@ export default function ConnectCalendar() {
             ocupadas e os novos eventos à medida em que são agendados.
           </Text>
 
-          <MultiStep size={4} currentStep={2} />
+          <MultiStep size={4} currentStep={2} color="primary" />
         </Header>
 
         <ConnectBox>
           <ConnectItem>
             <Text>Google Calendar</Text>
             {isSignedId ? (
-              <Button size="sm" disabled>
+              <Button size="medium" disabled>
                 Conectado
                 <Check />
               </Button>
             ) : (
-              <Button
-                variant="secondary"
-                size="sm"
-                onClick={handleConnectCalendar}
-              >
+              <Button size="medium" onClick={handleConnectCalendar}>
                 Conectar
                 <ArrowRight />
               </Button>
@@ -68,6 +64,7 @@ export default function ConnectCalendar() {
             onClick={handleNavigateToNextStep}
             type="submit"
             disabled={!isSignedId}
+            size="large"
           >
             Próximo passo
             <ArrowRight />

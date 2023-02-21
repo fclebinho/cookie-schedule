@@ -1,4 +1,4 @@
-import { Button, Text, TextInput } from '@ignite-ui/react'
+import { Button, Text, TextInput } from '@cookies-ui/react'
 import { ArrowRight } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -39,12 +39,11 @@ export function ClaimUsernameForm() {
     <>
       <Form as="form" onSubmit={handleSubmit(handleClaimUsername)}>
         <TextInput
-          size="sm"
           prefix="ignite.com/"
           placeholder="seu-usuário"
           {...register('username')}
         />
-        <Button size="sm" type="submit" disabled={isSubmitting}>
+        <Button type="submit" disabled={isSubmitting}>
           Reservar
           <ArrowRight />
         </Button>

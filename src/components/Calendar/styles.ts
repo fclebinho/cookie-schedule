@@ -1,4 +1,4 @@
-import { styled, Text } from '@ignite-ui/react'
+import { styled, Text } from '@cookies-ui/react'
 
 export const CalendarContainer = styled('div', {
   display: 'flex',

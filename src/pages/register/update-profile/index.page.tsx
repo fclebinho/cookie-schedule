@@ -6,7 +6,7 @@ import {
   MultiStep,
   Text,
   TextArea,
-} from '@ignite-ui/react'
+} from '@cookies-ui/react'
 import { GetServerSideProps } from 'next'
 import { unstable_getServerSession } from 'next-auth'
 import { useSession } from 'next-auth/react'
@@ -58,7 +58,7 @@ export default function UpdateProfile() {
             pode editar essas informações depois.
           </Text>
 
-          <MultiStep size={4} currentStep={4} />
+          <MultiStep size={4} currentStep={4} color="primary" />
         </Header>
 
         <ProfileBox as="form" onSubmit={handleSubmit(handleUpdateProfile)}>
@@ -79,7 +79,7 @@ export default function UpdateProfile() {
             </FormAnnotation>
           </label>
 
-          <Button type="submit" disabled={isSubmitting}>
+          <Button type="submit" size="large" disabled={isSubmitting}>
             Finalizar
             <ArrowRight />
           </Button>
