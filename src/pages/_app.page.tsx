@@ -7,6 +7,8 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClient } from '../lib/react-query'
 import { DefaultSeo } from 'next-seo'
 
+import { theme } from '../styles/theme'
+
 globalStyles()
 
 export default function App({
@@ -25,7 +27,9 @@ export default function App({
           }}
         />
 
-        <Component {...pageProps} />
+        <div className={theme}>
+          <Component {...pageProps} />
+        </div>
       </SessionProvider>
     </QueryClientProvider>
   )
